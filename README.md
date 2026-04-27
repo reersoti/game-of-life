@@ -1,5 +1,7 @@
 # Custom Game of Life
 
+![Python CI](https://github.com/reersoti/game-of-life/actions/workflows/python.yml/badge.svg)
+
 An interactive Python implementation of Conway’s Game of Life with customizable rules and graphical visualization.
 
 ## Overview
@@ -37,6 +39,7 @@ This allows the program to reproduce the classic Game of Life behavior or run ma
 ```text
 .
 ├── game_of_life/   # core package
+├── tests/          # unit tests for config and simulation logic
 ├── input.txt       # optional initial configuration
 ├── run.py          # project entry point
 ├── requirements.txt
@@ -51,6 +54,14 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+For Windows PowerShell:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
 ## Run
 
 ```bash
@@ -62,6 +73,18 @@ or
 ```bash
 python -m game_of_life
 ```
+
+## Tests
+
+```bash
+python -m unittest discover -s tests
+```
+
+The test suite checks core simulation behavior without opening the Tkinter GUI, including stable block patterns, blinker oscillation, config parsing, and fallback rule handling.
+
+## Continuous Integration
+
+The repository includes a GitHub Actions workflow that installs dependencies and runs unit tests on every push and pull request to `main`.
 
 ## Educational Value
 
@@ -79,6 +102,7 @@ This project can be used to:
 - separation of model and interface logic
 - work with grid state updates
 - interactive visualization of dynamic systems
+- automated testing of simulation logic
 
 ## Possible Improvements
 
@@ -86,14 +110,15 @@ This project can be used to:
 - support larger grids and optimized rendering
 - add pattern library
 - export simulation as GIF or video
-- add automated tests for update logic
 - add controls for speed, reset, and presets
 
 ## Tech Stack
 
 - Python
 - Tkinter
-- custom simulation logic
+- NumPy
+- unittest
+- GitHub Actions
 
 ## Notes
 
