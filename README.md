@@ -4,6 +4,10 @@
 
 An interactive Python implementation of Conway’s Game of Life with customizable rules and graphical visualization.
 
+<p align="center">
+  <img src="assets/simulation-flow.svg" alt="Game of Life simulation flow" width="800">
+</p>
+
 ## Overview
 
 This project is a modified version of the classic cellular automaton known as Conway’s Game of Life.  
@@ -38,6 +42,7 @@ This allows the program to reproduce the classic Game of Life behavior or run ma
 
 ```text
 .
+├── assets/         # visual documentation assets
 ├── game_of_life/   # core package
 ├── tests/          # unit tests for config and simulation logic
 ├── input.txt       # optional initial configuration
