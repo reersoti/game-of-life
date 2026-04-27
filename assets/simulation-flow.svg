@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360" role="img" aria-labelledby="title desc">
+  <title id="title">Game of Life simulation flow</title>
+  <desc id="desc">A visual diagram showing the Game of Life flow from user input to simulation update and rendering.</desc>
+  <rect width="920" height="360" rx="24" fill="#0f172a"/>
+  <text x="460" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#e2e8f0">Custom Game of Life</text>
+  <text x="460" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">configurable rules, neighborhoods, GUI rendering, and tested simulation logic</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="55" y="130" width="170" height="92" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <text x="140" y="162" text-anchor="middle" font-size="18" font-weight="700" fill="#e0f2fe">Input</text>
+    <text x="140" y="188" text-anchor="middle" font-size="13" fill="#bae6fd">clicks, rules,</text>
+    <text x="140" y="207" text-anchor="middle" font-size="13" fill="#bae6fd">neighborhood config</text>
+
+    <rect x="285" y="130" width="170" height="92" rx="16" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+    <text x="370" y="162" text-anchor="middle" font-size="18" font-weight="700" fill="#ede9fe">Simulation</text>
+    <text x="370" y="188" text-anchor="middle" font-size="13" fill="#ddd6fe">neighbor count</text>
+    <text x="370" y="207" text-anchor="middle" font-size="13" fill="#ddd6fe">birth/survival rules</text>
+
+    <rect x="515" y="130" width="170" height="92" rx="16" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+    <text x="600" y="162" text-anchor="middle" font-size="18" font-weight="700" fill="#d1fae5">Grid State</text>
+    <text x="600" y="188" text-anchor="middle" font-size="13" fill="#bbf7d0">next generation</text>
+    <text x="600" y="207" text-anchor="middle" font-size="13" fill="#bbf7d0">buffer update</text>
+
+    <rect x="745" y="130" width="120" height="92" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+    <text x="805" y="162" text-anchor="middle" font-size="18" font-weight="700" fill="#fef3c7">Render</text>
+    <text x="805" y="188" text-anchor="middle" font-size="13" fill="#fde68a">Tkinter</text>
+    <text x="805" y="207" text-anchor="middle" font-size="13" fill="#fde68a">canvas</text>
+  </g>
+
+  <g stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M225 176 H285"/>
+    <path d="M455 176 H515"/>
+    <path d="M685 176 H745"/>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <g transform="translate(335 255)">
+    <rect width="250" height="50" rx="12" fill="#111827" stroke="#475569"/>
+    <text x="125" y="31" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">Unit tests validate core simulation without opening GUI</text>
+  </g>
+</svg>
